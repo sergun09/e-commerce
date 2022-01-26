@@ -17,9 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Data\Repository\" />
-    <Folder Include="Modele\" />
+    <Folder Include="Data\Dto\" />
   </ItemGroup>
 
 </Project>
