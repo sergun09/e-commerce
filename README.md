@@ -9,4 +9,5 @@
 - Opération CREATE, UPDATE, DELETE
 - Ajout d'options de filtrage (pagination)
 - Gérer les exceptions
+- Front en Angular
 
