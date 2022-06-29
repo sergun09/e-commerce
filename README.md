@@ -1,13 +1,4 @@
-<p>Objectif du projet :</p>
+Projet d'apprentrissage du framework .NET Core WebApi en suivant la formation : 
+https://www.udemy.com/course/learn-to-build-an-e-commerce-app-with-net-core-and-angular/
 
-- Développer une application avec la dernière version de .NET (.NET 6)
-- Mise en pratique du Generic Repository avec le Specification Pattern
-- Apprentissage et utilisation d'Angular
-
-#### A développer :
-
-- Opération CREATE, UPDATE, DELETE
-- Ajout d'options de filtrage (pagination)
-- Gérer les exceptions
-- Front en Angular
 
