@@ -1,5 +1,6 @@
 using Core.Interfaces;
 using Infrastructure.Data;
+using Infrastructure.Data.SeedData;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,5 +33,20 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+using var scope = app.Services.CreateScope();
+var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
+var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+
+try 
+{
+    await context.Database.MigrateAsync();
+    await StoreContextSeed.SeedData(context);
+    logger.LogInformation("Migration réussi et données impotées!!!");
+}
+catch(Exception ex) 
+{
+    logger.LogError(ex, "Erreur durant la migration");
+}
 
 app.Run();
